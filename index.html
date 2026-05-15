@@ -1,0 +1,209 @@
+<!doctype html>
+<!--
+  DEPLOY-BLOCKERS — must be replaced before publishing:
+    1. <form action> uses placeholder Formspree ID (line ~156)
+    2. Footer mailing address is placeholder text (line ~191) — required by CASL
+    3. Update brand TLD if domain choice is not .ca
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>VetNoShowRescue — Refill the empty chair, same day. BC vet clinics.</title>
+<meta name="description" content="When a no-show or late-cancel opens a chair in your BC vet clinic, our automation refills it before the hour is up. Runs inside your existing PIMS. $499 setup + $179/mo CAD." />
+<meta name="theme-color" content="#0e2a23" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <a href="#" class="brand">
+    <span class="brand-mark" aria-hidden="true">V</span>
+    <span class="brand-name">VetNoShowRescue<span class="brand-tld">.ca</span></span>
+  </a>
+  <nav>
+    <a href="#how">How it works</a>
+    <a href="#math">The math</a>
+    <a href="#price">Pricing</a>
+    <a href="#book" class="btn-ghost">Book demo</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">For BC veterinary clinics &middot; CVBC-listed practices only</div>
+    <h1>The empty chair on Tuesday at&nbsp;3:15 cost you <span class="gloss">$240</span>.</h1>
+    <p class="lede">
+      We refill it before <span class="underline-thin">3:45</span> &mdash; from your own waitlist,
+      using your existing PIMS, with messages that read like your front-desk wrote them.
+    </p>
+    <div class="cta-row">
+      <a class="btn-primary" href="#book">See a 3-min Loom on your clinic</a>
+      <a class="btn-secondary" href="#how">How it actually works</a>
+    </div>
+    <p class="micro">No PIMS switch. No app to install. CASL-compliant. Cancel anytime after month&nbsp;3.</p>
+  </div>
+  <aside class="hero-card" aria-label="Sample rescue">
+    <div class="card-head">
+      <span class="dot dot-live"></span>
+      <span>Live rescue &mdash; sample</span>
+    </div>
+    <div class="card-row">
+      <span class="k">Trigger</span>
+      <span class="v">10:42 &mdash; "Bella" cancelled 11:00 dental</span>
+    </div>
+    <div class="card-row">
+      <span class="k">Pulled</span>
+      <span class="v">7 waitlist matches within 12&nbsp;km</span>
+    </div>
+    <div class="card-row">
+      <span class="k">Sent</span>
+      <span class="v">SMS to top 3 (staggered, 4&nbsp;min apart)</span>
+    </div>
+    <div class="card-row">
+      <span class="k">Booked</span>
+      <span class="v">10:51 &mdash; "Murphy" confirmed via reply Y</span>
+    </div>
+    <div class="card-row card-row--final">
+      <span class="k">Recovered</span>
+      <span class="v rec">$240 &middot; 9&nbsp;minutes</span>
+    </div>
+  </aside>
+</section>
+
+<section class="strip">
+  <div class="strip-item"><b>~600</b><span>independent BC clinics</span></div>
+  <div class="strip-item"><b>2&ndash;5%</b><span>typical no-show rate</span></div>
+  <div class="strip-item"><b>$180&ndash;$320</b><span>avg lost revenue per slot</span></div>
+  <div class="strip-item"><b>&lt; 30&nbsp;min</b><span>rescue-window target</span></div>
+  <div class="strip-foot">Market ranges from public BC vet-fee benchmarks. Rescue-window is our target SLA &mdash; your clinic's actual figure is published in the monthly report.</div>
+</section>
+
+<section id="how" class="how">
+  <h2>How it works</h2>
+  <p class="section-lede">No new software for your team. We plug into the browser session your front-desk already has open.</p>
+  <ol class="steps">
+    <li>
+      <span class="step-n">01</span>
+      <h3>2-hour onboarding</h3>
+      <p>One Zoom with your office manager. We walk through your PIMS &mdash; ezyVet, Cornerstone, AVImark, or Provet Cloud &mdash; map where waitlist and cancellations live, and approve your message templates. You sign a one-page CASL consent record.</p>
+    </li>
+    <li>
+      <span class="step-n">02</span>
+      <h3>Automation runs in your session</h3>
+      <p>A small headless browser, authenticated as a least-privilege staff user <em>your team creates</em>, watches the schedule. When a slot opens during business hours, it pulls the recall + waitlist queue, ranks by recency and proximity, and drafts outreach.</p>
+    </li>
+    <li>
+      <span class="step-n">03</span>
+      <h3>Front-desk approves with one tap</h3>
+      <p>Outbound messages land in a Slack or SMS channel for your team. One thumbs-up sends. Auto-send is opt-in for clinics that want it after week 4.</p>
+    </li>
+    <li>
+      <span class="step-n">04</span>
+      <h3>You see the dollars</h3>
+      <p>Monthly PDF report &mdash; slots opened, slots refilled, dollars rescued, response-time percentiles. No vanity metrics. If we don't beat the retainer 3&times;, we refund.</p>
+    </li>
+  </ol>
+</section>
+
+<section id="math" class="math">
+  <h2>The math, on the back of a napkin</h2>
+  <div class="math-grid">
+    <div class="math-card">
+      <div class="math-line">A typical 2-vet BC clinic books</div>
+      <div class="math-num">~180 appts / week</div>
+    </div>
+    <div class="math-card">
+      <div class="math-line">At a 3% no-show rate, that's</div>
+      <div class="math-num">~5 empty slots / week</div>
+    </div>
+    <div class="math-card">
+      <div class="math-line">Average appointment value</div>
+      <div class="math-num">~$220</div>
+    </div>
+    <div class="math-card math-card--accent">
+      <div class="math-line">Even a 35% rescue rate is</div>
+      <div class="math-num">$1,540 / mo recovered</div>
+    </div>
+  </div>
+  <p class="math-foot">$179/mo retainer &middot; ~$1,540 rescued &middot; <b>8.6&times; ROI</b> at the conservative end. Your numbers will differ &mdash; we benchmark against <em>your</em> last 90 days during onboarding and show you the projection before you sign.</p>
+</section>
+
+<section id="price" class="price">
+  <h2>Pricing</h2>
+  <div class="plan">
+    <div class="plan-tag">One plan. Built for BC.</div>
+    <div class="plan-amounts">
+      <div class="plan-setup"><span class="dollar">$</span><span class="big">499</span><span class="trail">CAD setup</span></div>
+      <div class="plan-divide">+</div>
+      <div class="plan-mrr"><span class="dollar">$</span><span class="big">179</span><span class="trail">CAD / month</span></div>
+    </div>
+    <ul class="plan-list">
+      <li>One PIMS adapter, configured for your clinic</li>
+      <li>Up to 3 message templates (rescue, recall, reminder)</li>
+      <li>Twilio Canada SMS fallback included (fair-use cap: 1,500 msg/mo)</li>
+      <li>Monthly recovered-revenue PDF report</li>
+      <li>48-hour business-day support SLA</li>
+      <li>Cancel anytime after month 3 &mdash; no question</li>
+    </ul>
+    <a class="btn-primary plan-cta" href="#book">Book the 20-min walkthrough</a>
+    <p class="micro">Comparable US tools (Next In Line, Weave, Chckvet) run $249&ndash;$299/mo USD plus $500&ndash;$990 setup. We're built for BC, priced for BC, with a Canadian-owned operator on the other end of the email.</p>
+  </div>
+</section>
+
+<section id="book" class="book">
+  <h2>Book a 20-minute Loom walkthrough on your own clinic.</h2>
+  <p>Send your clinic name and we'll record a private Loom showing exactly what the rescue flow would look like with your PIMS &mdash; before you commit to anything.</p>
+  <form class="contact-form" action="https://formspree.io/f/mbdpboja" method="POST" novalidate>
+    <label>Clinic name<input type="text" name="clinic" required autocomplete="organization" /></label>
+    <label>Your name<input type="text" name="name" required autocomplete="name" /></label>
+    <label>Work email<input type="email" name="email" required autocomplete="email" /></label>
+    <label>PIMS you use
+      <select name="pims" required>
+        <option value="">Choose one&hellip;</option>
+        <option>ezyVet</option>
+        <option>Cornerstone (Idexx)</option>
+        <option>AVImark (Covetrus)</option>
+        <option>Provet Cloud</option>
+        <option>Hippo Manager</option>
+        <option>Vetter</option>
+        <option>Other / not sure</option>
+      </select>
+    </label>
+    <label class="full">Anything specific you're hoping this fixes?
+      <textarea name="notes" rows="3"></textarea>
+    </label>
+    <button class="btn-primary" type="submit">Send &mdash; I'll reply within 1 business day</button>
+    <p class="micro">By submitting you consent to one reply email. We don't add you to anything. CASL s.10(9) implied consent applies because you initiated.</p>
+  </form>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-row">
+    <div>
+      <b>VetNoShowRescue</b><br />
+      Operated by Kobe Neilson &middot; British Columbia, Canada<br />
+      <a href="mailto:hello@vetnoshowrescue.ca">hello@vetnoshowrescue.ca</a>
+    </div>
+    <div class="foot-mail">
+      <b>Mailing address (CASL s.6(2)(a))</b><br />
+      <span class="addr-placeholder">[Operator street address &mdash; required by CASL on every CEM]</span>
+    </div>
+    <div class="foot-legal">
+      <a href="#">Privacy</a> &middot;
+      <a href="#">Terms</a> &middot;
+      <a href="#">CASL unsubscribe</a><br />
+      <span class="micro">Not affiliated with CVBC, ezyVet, Idexx, Covetrus, or Provet. PIMS automation runs only inside the customer clinic's authenticated session.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
